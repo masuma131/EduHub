@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduWeb - Sign Up</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/auth.css">
+</head>
+<body>
+  <h2>Create an Account</h2>
+  <div id="authForm">
+    <input type="text" placeholder="First Name" id="firstName">
+    <input type="text" placeholder="Last Name" id="lastName">
+    <input type="email" placeholder="Email" id="userEmail">
+    <input type="password" placeholder="Password" id="userPassword"> <br>
+    <button id="signUpButton">Sign Up</button>
+  </div>
+
+  <p>Already have an account? <a href="signin.html">Sign In</a></p>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBZP7GUhbF_BvP9wvQ6hryyqkNWd_LSTws",
+      authDomain: "react-job-app.firebaseapp.com",
+      projectId: "react-job-app",
+      storageBucket: "react-job-app.appspot.com",
+      messagingSenderId: "520992002236",
+      appId: "9a15dc670413fd8b48c0b9"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const signUpButton = document.getElementById("signUpButton");
+    const userEmail = document.getElementById("userEmail");
+    const userPassword = document.getElementById("userPassword");
+    const firstName = document.getElementById("firstName");
+    const lastName = document.getElementById("lastName");
+
+    signUpButton.addEventListener("click", () => {
+      const email = userEmail.value.trim();
+      const password = userPassword.value.trim();
+      const fname = firstName.value.trim();
+      const lname = lastName.value.trim();
+
+      if (!fname || !lname || !email || !password) {
+        alert("Please fill all the fields.");
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email format.");
+        return;
+      }
+
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return;
+      }
+
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          alert(`Account created successfully! Welcome, ${fname} ${lname}!`);
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          alert(`Error: ${error.message}`);
+        });
+    });
+  </script>
+</body>
+</html>

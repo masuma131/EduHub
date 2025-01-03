@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333;
+  }
+  
+  h2 {
+    color: hsl(170, 75%, 41%);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #authForm {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input:focus {
+    border-color: hsl(170, 75%, 41%);
+    outline: none;
+    /* box-shadow: 0 0 5px hsl(180, 33%, 98%); */
+  }
+  button {
+    background-color: hsl(170, 75%, 41%);
+    color: #fff;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s ease;
+    margin: 20px auto;
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(-90deg, hsl(151, 58%, 46%) 0%, hsl(170, 75%, 41%) 100%);
+    z-index: -1;
+    border-radius: inherit;
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+  }
+  
+  button:hover::before {
+    transform: translateX(0);
+  }
+  
+  button:hover {
+    color: #fff;
+  }
+
+  p {
+    margin-top: 20px;
+    color: #555;
+  }
+  
+  a {
+    color: hsl(170, 75%, 41%);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  p a {
+    display: inline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    #authForm {
+      padding: 20px;
+    }
+  }

@@ -1,0 +1,110 @@
+/* Course Page Hero */
+.hero {
+    padding: 170px 20px; 
+    background-color: var(--isabelline); 
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero .hero-text {
+    font-size: clamp(1.4rem, 3vw, var(--fs-4)); /* Responsive font size */
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  
+  .hero .hero-bg-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(240, 240, 240, 0.5), rgba(255, 255, 255, 0.5));
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+  }
+  
+  .course-filters-section {
+    padding: 30px 20px;
+   
+  }
+
+  .course {
+    background-color: white;
+    padding: 30px 20px 100px 20px;
+  }
+
+  /* Course Filters */
+  .course-filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .course-filters .input-field {
+    padding: 10px;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--radius-5);
+    font-size: var(--fs-5);
+  }
+  
+  .course-filters .btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: var(--fs-5);
+    background-color: var(--kappel);
+    color: var(--white);
+    border-radius: var(--radius-5);
+  }
+  
+  /* Course Page Cards */
+  .course-page .grid-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .course-card {
+    background: var(--white);
+    border-radius: var(--radius-5);
+    box-shadow: var(--shadow-1);
+    overflow: hidden;
+    text-align: center;
+    transition: var(--transition-1);
+  }
+  
+  .course-card:hover {
+    box-shadow: var(--shadow-2);
+  }
+  
+  .course-card .img-holder {
+    aspect-ratio: 16 / 9;
+    background-color: var(--light-gray);
+    overflow: hidden;
+  }
+  
+  .course-card .card-content {
+    padding: 20px;
+  }
+  
+  .course-card .badge {
+    font-size: var(--fs-6);
+    background: var(--kappel_15);
+    color: var(--kappel);
+    padding: 5px 10px;
+    border-radius: var(--radius-pill);
+  }
+  
+  .course-card .card-title {
+    margin: 10px 0;
+    font-size: var(--fs-4);
+  }
+  
+  .course-card .price {
+    font-size: var(--fs-5);
+    color: var(--radical-red);
+    font-weight: var(--fw-600);
+  }
+  

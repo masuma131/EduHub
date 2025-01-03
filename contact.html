@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
+  <link rel="stylesheet" href="assets/css/style.css"> <!-- Base styles -->
+  <link rel="stylesheet" href="assets/css/contact.css"> <!-- Specific styles for course page -->
+</head>
+
+<!-- Google Maps API script -->
+<script async defer 
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYOikgyqOLAFsC8sqLflRWDRqGhBmevOo&callback=initMap">
+</script>
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">
+        <img src="./assets/images/logo.svg" width="162" height="50" alt="EduWeb logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/logo.svg" width="162" height="50" alt="EduWeb logo">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <!-- <li class="navbar-item">
+            <a href="#about" class="navbar-link" data-nav-link>About</a>
+          </li> -->
+
+          <li class="navbar-item">
+            <a href="course.html" class="navbar-link" data-nav-link>Courses</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <div class="header-actions">
+
+
+        <a href="signup.html" class="btn has-before">
+          <span class="span">Try for free</span>
+
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+
+        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  
+    <!-- Contact Hero Section -->
+    <section class="hero">
+        <div class="container">
+          <h1 class="h1 section-title">Contact Us</h1>
+          <p class="hero-text">Feel free to reach out to us for any inquiries or questions.</p>
+        </div>
+      </section>
+
+     <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left: Contact Information -->
+        <div class="contact-info">
+            <h2>Reach Out to Us!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, ducimus.</p>
+            <ul>
+              <li>
+                <ion-icon name="location-outline"></ion-icon>
+                70-80 Upper St Norwich NR2
+              </li>
+              <li>
+                <ion-icon name="mail-outline"></ion-icon>
+                info@eduhub.com
+              </li>
+              <li>
+                <ion-icon name="call-outline"></ion-icon>
+                +01 123 4567 890
+              </li>
+            </ul>
+            <div id="map" style="width: 100%; height: 303px; margin-top: 20px;"></div>
+          </div>
+          
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form">
+          <h2>Send Us a Message</h2>
+          <form action="https://formspree.io/f/xvgpyybw" method="POST">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+
+    <div class="footer-top section">
+      <div class="container grid-list">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-light.svg" width="162" height="50" alt="EduWeb logo">
+          </a>
+
+          <p class="footer-brand-text">
+            Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.
+          </p>
+
+          <div class="wrapper">
+            <span class="span">Add:</span>
+
+            <address class="address">70-80 Upper St Norwich NR2</address>
+          </div>
+
+          <div class="wrapper">
+            <span class="span">Call:</span>
+
+            <a href="tel:+011234567890" class="footer-link">+01 123 4567 890</a>
+          </div>
+
+          <div class="wrapper">
+            <span class="span">Email:</span>
+
+            <a href="mailto:info@eduweb.com" class="footer-link">info@eduweb.com</a>
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Online Platform</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Courses</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Instructor</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Events</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Instructor Profile</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Purchase Guide</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Gallery</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">News & Articles</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">FAQ's</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Sign In/Registration</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Coming Soon</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Contacts</p>
+
+          <p class="footer-list-text">
+            Enter your email address to register to our newsletter subscription
+          </p>
+
+          <form action="https://formspree.io/f/xvgpyybw" method="POST" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="Your email" required class="input-field">
+
+            <button type="submit" class="btn has-before">
+              <span class="span">Subscribe</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </form>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          Copyright 2022 All Rights Reserved by <a href="#" class="copyright-link">EduHub</a>
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+  <script>
+    // Initialize and add the map
+    function initMap() {
+    // The location of EduHub
+    const eduHubLocation = { lat: 52.6309, lng: 1.2974 }; // Replace with your latitude and longitude
+
+    // The map, centered at EduHub
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 15,
+      center: eduHubLocation,
+    });
+
+    // The marker, positioned at EduHub
+    const marker = new google.maps.Marker({
+      position: eduHubLocation,
+      map: map,
+    });
+  }
+  </script>
+  <!-- 
+    - ionicon link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- JavaScript -->
+  
+  
+</body>
+</html>
